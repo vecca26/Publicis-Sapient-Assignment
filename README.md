@@ -27,7 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-This iS Build for Publicis Sapient Assignment test
+This Project is Build for Publicis Sapient Assignment test
 
 Steps to follow and run this project are mentioned below
 
