@@ -1,0 +1,144 @@
+
+<div class="container-fluid mr-0">
+  <div class="jumbotron">
+ 
+  <h1 class="ml-5">Space X Launch Program</h1> 
+  </div> 
+  <div class="row">
+    <div class="col-lg-2 col-md-12  col-sl-12 pink">
+      <h4>Fliter</h4>
+      <p class="center"><u>Launch Year</u></p>
+      <div class="row ">
+       
+      <div class="col-6 center "><button>2006</button></div>
+      <div class="col-6 center "><button>2007</button></div>
+      <div class="col-6 center"><button>2008</button></div>
+      <div class="col-6 center"><button>2009</button></div>
+      <div class="col-6 center"><button>2010</button></div>
+      <div class="col-6 center"><button>2011</button></div>
+      <div class="col-6 center"><button>2012</button></div>
+      <div class="col-6 center"><button>2013</button></div>
+      <div class="col-6 center"><button (click)="onAlllaunch()">2014</button></div>
+      <div class="col-6 center"><button>2015</button></div>
+      <div class="col-6 center"><button>2016</button></div>
+      <div class="col-6 center"><button>2017</button></div>
+      <div class="col-6 center"><button>2018</button></div>
+      <div class="col-6 center"><button>2019</button></div>
+      <div class="col-6 center"><button>2020</button></div>
+  </div>
+  
+  <p class="center"><u>Sucessful Launch</u></p>
+  <div class="row">
+    <div class="col-6 center"><button (click)="onSuccesss()">True</button> </div>
+    <div class="col-6 center"><button (click)="onDefault()">False</button></div>
+  </div>
+  <p class="center"><u>Sucessful Landing</u></p>
+  <div class="row">
+    <div class="col-6 center"><button (click)="onLanding()">True</button> </div>
+    <div class="col-6 center"><button (click)="onDefault()">False</button></div>
+  </div>
+   
+    </div>
+    <div class="col-lg-10 col-md-12 col-sl-12" *ngIf="isDefault">
+        <div class="row">
+      <div   *ngFor="let launch of launchs">
+        <div   class="card in pull-right" style="width: 20rem;margin:5px 5px 5px 20px;">
+          <img src="{{launch.links.mission_patch_small}}" class="card-img-top img-thumbnail" alt="...">
+          <div class="card-body">
+            <h6 class="card-title">{{launch.launch_site.site_name}}</h6>
+            <h6 class="card-text">Flight No: {{launch.flight_number}}</h6>
+            <h6 class="card-text">Launch Year: {{launch.launch_year}}</h6>
+            <h6 class="card-text">Successful Launch : {{launch.launch_success}}</h6>
+            <h6 class="card-text">Successful Landing : {{launch.launch_success}}</h6>
+          </div> 
+       </div>   
+     </div>
+    </div>
+
+    </div>
+    <div class="col-lg-10 col-md-12 col-sl-12" *ngIf="allsucess">
+      <div class="row">
+      <div *ngFor="let succes of success">
+      <div   class="card in pull-right" style="width: 20rem;margin:5px 5px 5px 20px;">
+        <img src="{{succes.links.mission_patch_small}}" class="card-img-top img-thumbnail" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">{{succes.launch_site.site_name}}</h6>
+          <h6 class="card-text">Flight No: {{succes.flight_number}}</h6>
+          <h6 class="card-text">Launch Year: {{succes.launch_year}}</h6>
+          <h6 class="card-text">Successful Launch : {{succes.launch_success}}</h6>
+          <h6 class="card-text">Successful Landing : {{succes.launch_success}}</h6>
+     </div>   
+   </div>
+  </div>
+
+  </div>
+    
+  </div>
+  <div class="col-lg-10 col-md-12 col-sl-12" *ngIf="variable">
+    <div class="row">
+      <div *ngFor="let laun of newlaunchs">
+    <div   class="card in pull-right" style="width: 20rem;margin:5px 5px 5px 20px;">
+      <img src="{{laun.links.mission_patch_small}}" class="card-img-top img-thumbnail" alt="...">
+    <div class="card-body">
+      <h6 class="card-title">{{laun.launch_site.site_name}}</h6>
+      <h6 class="card-text">Flight No: {{laun.flight_number}}</h6>
+      <h6 class="card-text">Launch Year: {{laun.launch_year}}</h6>
+      <h6 class="card-text">Successful Launch : {{laun.launch_success}}</h6>
+      <h6 class="card-text">Successful Landing : {{laun.launch_success}}</h6>
+   </div>   
+ </div>
+</div>
+
+</div>
+  
+</div>
+<div class="col-lg-10 col-md-12 col-sl-12" *ngIf="allLanding">
+  <div class="row">
+    <div *ngFor="let lands of landing">
+  <div   class="card in pull-right" style="width: 20rem;margin:5px 5px 5px 20px;">
+    <img src="{{lands.links.mission_patch_small}}" class="card-img-top img-thumbnail" alt="...">
+    <div class="card-body">
+      <h6 class="card-title">{{lands.launch_site.site_name}}</h6>
+      <h6 class="card-text">Flight No: {{lands.flight_number}}</h6>
+      <h6 class="card-text">Launch Year: {{lands.launch_year}}</h6>
+      <h6 class="card-text">Successful Launch : {{lands.launch_success}}</h6>
+      <h6 class="card-text">Successful Landing : {{lands.launch_success}}</h6>
+      
+          
+        </div>
+</div>
+</div>
+
+</div>
+
+</div>
+<div class="col-lg-10 col-md-12 col-sl-12" *ngIf="allRock">
+  <div class="row">
+    <div *ngFor="let rocket of allrockets">
+  <div   class="card in pull-right" style="width: 20rem;margin:5px 5px 5px 20px;">
+    <img src="{{rocket.links.mission_patch_small}}" class="card-img-top img-thumbnail" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">{{rocket.launch_site.site_name}}</h6>
+          <h6 class="card-text">Flight No: {{rocket.flight_number}}</h6>
+          <h6 class="card-text">Launch Year: {{rocket.launch_year}}</h6>
+          <h6 class="card-text">Successful Launch : {{rocket.launch_success}}</h6>
+          <h6 class="card-text">Successful Landing : {{rocket.launch_success}}</h6>
+          
+        </div>
+</div>
+</div>
+
+</div>
+
+</div>
+<div class="col-12">
+<div class="center">
+  
+<footer>
+  <p>Developed By :Vivekanand N Mestha<p>
+  
+</footer>
+</div>
+</div>
+</div>
+</div>

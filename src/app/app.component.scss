@@ -1,0 +1,43 @@
+.container-fulid.t{
+    background-color: #dfdfdf;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.fl{
+  background:white;  
+}
+button{
+    background-color: #a4fc7f;
+    border-color: #a4fc7f;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.btn-group{
+    float: left; 
+    margin-right:10px;
+}
+.rocket{
+    margin-left:50px
+}
+.rocket.in{
+    
+    margin-right: 10px;
+
+}
+img.card-img-top.img-thumbnail {
+    padding:20px;
+    background-color: grey;
+}
+
+    // .pink{
+    //     background-color:#f7f7f7;
+    // }
+    .space{
+        width:200px;
+        height:200px;
+    }
+    .rocket{
+        background-color:#f7f7f7;
+    }
